@@ -5,7 +5,3 @@ module.exports = defineConfig({
     ? '/techno-service-storage/'
     : '/'
 })
-
-module.exports = {
-
-}
