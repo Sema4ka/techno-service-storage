@@ -511,7 +511,7 @@ export default {
     },
 
     change(id){
-      this.toChange = this.data[id];
+      this.toChange = this.data[id-1];
       this.isChange = true;
     },
     hideCh(id, obj){
@@ -521,8 +521,9 @@ export default {
         cpy[v] = obj[i].value;
         i++;
       }
-      this.data[id] = {...cpy};
+      this.data[id-1] = {...cpy};
       this.isChange = false;
+      this.searched = this.data;
     },
     addData(){
       this.isAdd = true;
@@ -537,6 +538,7 @@ export default {
       this.data.push(cpy);
       console.log(cpy);
       this.isAdd = false;
+      this.searched = this.data;
     }
   }
   ,
